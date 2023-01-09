@@ -2,7 +2,7 @@ import {
   storeProjectsAndToDos,
   fetchFromStorage,
   updateProjects,
-} from "./localStorage";
+} from "./firebase";
 import ToDo from "./toDo";
 
 const newToDoButton = document.getElementById("newToDo");

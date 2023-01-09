@@ -11,19 +11,10 @@ import {
 } from "firebase/firestore";
 import ToDo from "./toDo";
 
-// Your web app's Firebase configuration
-const firebaseConfig = {
-  apiKey: "AIzaSyBTz4R0Yu1js0JZF6akixIB87Ckujk5WYE",
-  authDomain: "to-do-list-6d6f9.firebaseapp.com",
-  projectId: "to-do-list-6d6f9",
-  storageBucket: "to-do-list-6d6f9.appspot.com",
-  messagingSenderId: "894553572495",
-  appId: "1:894553572495:web:92d5b687fa2b355d0bdcfa",
-};
+import { getFirebaseConfig } from "./firebase-config";
 
-initializeApp(firebaseConfig);
+initializeApp(getFirebaseConfig());
 const db = getFirestore();
-
 const colRef = collection(db, "todos");
 
 export async function storeProjectsAndToDos(key, toDo) {
